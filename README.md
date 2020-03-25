@@ -60,10 +60,12 @@ npm install -g @angular/cli
 
 ## Create Project and Components:
 
-ng new angular9-ngrx-store-blockchain
+### ng new angular9-ngrx-store-blockchain
 
 ng g c blockchain
 
+
+### ng new angular9-ngrx-store-basic
 
 
 
