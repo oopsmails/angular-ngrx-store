@@ -11,7 +11,13 @@ Run
   git config --global user.email "you@example.com"
   git config --global user.name "Your Name"
 
+git config --global credential.helper store
 
+Then, 
+
+git pull
+
+The storage format is a .git-credentials file, stored in plaintext.
 
 ### install/update NodeJS
 
@@ -52,11 +58,11 @@ npm -v
 npm install -g @angular/cli
 
 
-## Create Project:
+## Create Project and Components:
 
-ng g c angular-9-ngrx-store-blockchain
+ng new angular9-ngrx-store-blockchain
 
-
+ng g c blockchain
 
 
 
