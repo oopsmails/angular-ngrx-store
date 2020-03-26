@@ -69,10 +69,9 @@ ng g c blockchain
 
 npm install @ngrx/store
 
+### ng add @ngrx/store-devtools to enable Redux extension in Chrome
 
-
-
-
+ng add @ngrx/store-devtools
 
 
 
