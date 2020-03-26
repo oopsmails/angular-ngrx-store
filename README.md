@@ -67,6 +67,8 @@ ng g c blockchain
 
 ### ng new angular9-ngrx-store-basic
 
+npm install @ngrx/store
+
 
 
 
