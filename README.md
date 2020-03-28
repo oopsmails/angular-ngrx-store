@@ -1,5 +1,13 @@
 # angular-9-ngrx-store
 
+## angular9-ngrx-store-basic
+From:
+https://developer.school/introduction-to-ngrx-store/
+
+https://developer.school/introduction-to-ngrx-effects/
+
+## angular9-ngrx-store-blockchain
+
 From: https://appdividend.com/2018/01/31/angular-ngrx-store-tutorial-example-scratch/
 
 ## Setup Environment:
