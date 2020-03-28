@@ -109,6 +109,23 @@ As always, you can use the Angular CLI to set this up automatically:
 
 
 
+## Problems and Issues:
+
+### no provider for formbuilder angular 9:
+
+```
+@NgModule({
+  imports: [
+      BrowserModule /* or CommonModule */, 
+      FormsModule,
+      ReactiveFormsModule <--------------------------------------- need this ReactiveFormsModule
+  ],
+  ...
+})
+```
+
+
+
 
 
 
