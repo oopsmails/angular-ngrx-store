@@ -11,12 +11,15 @@ import { Blockchain } from '../models/blockchain.model';
 })
 export class BlockchainComponent implements OnInit {
 
+  title: string;
+
   angForm: FormGroup;
 
   constructor(private store: Store<AppState>, private fb: FormBuilder) {
+    this.title = 'Angular 9 Ngrx Stroe Blockchain';
     this.createForm();
   }
-
+  
   createForm() {
     this.angForm = this.fb.group({
       name: ['', Validators.required],
@@ -25,6 +28,7 @@ export class BlockchainComponent implements OnInit {
   }
 
   addCoin(name, price) {
+    console.log('adding coin .....');
     this.store.dispatch({
       type: 'ADD_COIN',
       payload: <Blockchain>{
@@ -34,7 +38,7 @@ export class BlockchainComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
