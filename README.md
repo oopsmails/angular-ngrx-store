@@ -93,6 +93,7 @@ Finally, start your database and API by opening another terminal window and typi
 
 `ng g c blockchain`
 
+`ng g s services/coins`
 
 ### ng new angular9-ngrx-store-basic
 
@@ -132,8 +133,11 @@ As always, you can use the Angular CLI to set this up automatically:
 })
 ```
 
+### ng serve is not watching changes:
 
+Use `--poll=2000` to resolve the problem.
 
+`"start": "json-server --watch db-blockchain.json --port 13001 | ng serve --poll=2000 --proxy-config proxy.conf.json --port 4401",`
 
 
 

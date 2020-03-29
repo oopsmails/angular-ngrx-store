@@ -1,11 +1,59 @@
 import { Blockchain } from '../models/blockchain.model';
+import { BlockChainAction, BlockChainActionTypes } from './blockchain.action';
 
-export const ADD_COIN = 'ADD_COIN';
+export interface BlockChainState {
+    list: Blockchain[],
+    loading: boolean,
+    error: Error
+}
 
-export function addCoinReducer(state: Blockchain[] = [], action) {
+const initialState: BlockChainState = {
+    list: [],
+    loading: false,
+    error: undefined
+};
+
+export function blockChainReducer(state: BlockChainState = initialState, action: BlockChainAction) {
     switch (action.type) {
-        case ADD_COIN:
-            return [...state, action.payload];
+
+        case BlockChainActionTypes.LOAD_ITEMS:
+            return {
+                ...state,
+                loading: true
+            }
+        case BlockChainActionTypes.LOAD_ITEMS_SUCCESS:
+            return {
+                ...state,
+                list: action.payload,
+                loading: false
+            }
+
+        case BlockChainActionTypes.LOAD_ITEMS_FAILURE:
+            return {
+                ...state,
+                error: action.payload,
+                loading: false
+            }
+
+
+        case BlockChainActionTypes.ADD_ITEM:
+            return {
+                ...state,
+                loading: true
+            }
+        case BlockChainActionTypes.ADD_ITEM_SUCCESS:
+            return {
+                ...state,
+                list: [...state.list, action.payload],
+                loading: false
+            };
+        case BlockChainActionTypes.ADD_ITEM_FAILURE:
+            return {
+                ...state,
+                error: action.payload,
+                loading: false
+            };
+
         default:
             return state;
     }

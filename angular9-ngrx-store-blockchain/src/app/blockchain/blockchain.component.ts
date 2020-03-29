@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { AppState } from '../app.state';
 import { Blockchain } from '../models/blockchain.model';
+import { AppState } from '../store/app-state.model';
+
 
 @Component({
   selector: 'app-blockchain',

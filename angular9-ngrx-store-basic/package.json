@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json --port 4400",
-    "start:albert": "json-server --watch db.json --port 13000 | ng serve --proxy-config proxy.conf.json --port 4400",
+    "start:orig": "ng serve --proxy-config proxy.conf.json --port 4400",
+    "start": "json-server --watch db.json --port 13000 | ng serve --poll=2000 --proxy-config proxy.conf.json --port 4400",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

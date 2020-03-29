@@ -1,0 +1,8 @@
+{
+    "blockchains": [
+      {
+        "name": "bitcoin",
+        "price": 10000
+      }
+    ]
+  }
