@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "angular9-ngrx-store-basic": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular9-ngrx-store-basic"
+    }
+  },
+  "defaultProject": "angular9-ngrx-store-basic",
+  "cli": {
+    "analytics": "5d8e6cd7-67d9-47d8-8af0-2d4c86fa6197"
+  }
 }
