@@ -10,6 +10,27 @@ import { AddItemAction, AddItemFailureAction, AddItemSuccessAction, DeleteItemAc
 @Injectable()
 export class ShoppingEffects {
 
+    /**
+     * SHOW/DIMISS Spinner
+     *
+     * @memberof AppEffects
+     */
+    // @Effect({ dispatch: false }) loading$ = this.actions$
+    //     .ofType(Types.FETCH_TOKEN_DATA)
+    //     .map(() => this.store.dispatch(this.toastAction.showSpinner()))
+    //     .map(() => this.utilsService.sendToDevice(DeviceActions.HIDE_TITLE_BAR));
+
+
+    // @Effect({ dispatch: false }) dismiss$ = this.actions$
+    //     .ofType(
+    //         Types.FETCH_TOKEN_ERROR,
+    //         Types.GET_ALERTS_PROFILE_FULLFILLED,
+    //         Types.GET_ALERTS_PROFILE_ERROR,
+    //         Types.NO_ALERTS_PROFILE_ERROR
+    //     )
+    //     .map(() => this.store.dispatch(this.toastAction.dismissToast()));
+
+
     @Effect() loadShopping$ = this.actions$
         .pipe(
             ofType<LoadShoppingAction>(ShoppingActionTypes.LOAD_SHOPPING),
