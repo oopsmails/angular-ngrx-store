@@ -1,14 +1,15 @@
 # angular-9-ngrx-store
 
-## angular9-ngrx-store-basic
-From:
-https://developer.school/introduction-to-ngrx-store/
+See README.md of each project
 
-https://developer.school/introduction-to-ngrx-effects/
+## angular9-ngrx-store-basic
 
 ## angular9-ngrx-store-blockchain
 
-From: https://appdividend.com/2018/01/31/angular-ngrx-store-tutorial-example-scratch/
+## AngularNgrxStoreCustomer
+
+20201212: working on
+
 
 ## Setup Environment:
 
@@ -81,22 +82,10 @@ Finally, start your database and API by opening another terminal window and typi
 `json-server db.json`
 
 
-
 ## Setup Angular:
 
 `npm install -g @angular/cli`
 
-
-## Create Project and Components:
-
-### ng new angular9-ngrx-store-blockchain
-
-`ng g c blockchain`
-
-
-### ng new angular9-ngrx-store-basic
-
-`npm install @ngrx/store`
 
 ### ng add @ngrx/store-devtools to enable Redux extension in Chrome
 
@@ -115,8 +104,6 @@ As always, you can use the Angular CLI to set this up automatically:
 
 `ng add @ngrx/effects` <--- already with angular 9
 
-
-
 ## Problems and Issues:
 
 ### no provider for formbuilder angular 9:
@@ -131,15 +118,6 @@ As always, you can use the Angular CLI to set this up automatically:
   ...
 })
 ```
-
-
-
-
-
-
-
-
-
 
 
 
