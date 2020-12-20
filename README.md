@@ -119,6 +119,16 @@ As always, you can use the Angular CLI to set this up automatically:
 })
 ```
 
+### Linux: angular system limit for number of file watchers reached
+
+Linux uses the inotify package to observe filesystem events, individual files or directories.
+
+`echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -`p
+
+### Angular: No base href set. Please provide a value for the APP_BASE_HREF token or add a base element to the document.
+
+Make sure that index.html is a valid HTML file by adding the body element, in which you can insert the Angular root component
+
 
 
 
