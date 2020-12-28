@@ -18,7 +18,9 @@ export class AppComponent implements OnInit {
   simpleTimer$ = interval(100);
   _notifier: Subject<TimerResult> = new Subject();
   notifier$: Observable<TimerResult> = this._notifier.asObservable();
+  
   ngOnInit() { }
+
   startTimer(): Observable<any> {
     const timer$ = this.simpleTimer$.pipe(
       tap((res) => this.result = res),
@@ -26,12 +28,20 @@ export class AppComponent implements OnInit {
     );
     return combineLatest(timer$, this.notifier$)
   }
+
   end() {
     this._notifier.next(TimerResult.ABORTED)
   }
+
   start() {
     this.startTimer().subscribe(([timer, action]) => {
       this.result = "end:" + timer + " action:" + action
     })
+  }
+
+  valueEmittedFromChildComponent: string;
+  
+  parentEventHandlerFunction(valueEmitted) {
+    this.valueEmittedFromChildComponent = valueEmitted;
   }
 }

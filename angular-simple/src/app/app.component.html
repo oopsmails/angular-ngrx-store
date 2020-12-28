@@ -3,3 +3,12 @@
 </p>
 <button (click)="start()">start</button>
 <button (click)="end()">end</button>
+
+<p>
+  <span><b>Value emitted from child component is to Parent:</b></span>
+  
+  {{ valueEmittedFromChildComponent }}
+
+  <app-child (buttonClicked)="parentEventHandlerFunction($event)">
+  </app-child>
+</p>
