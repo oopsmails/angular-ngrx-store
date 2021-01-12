@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { interval, Observable, Subject, combineLatest } from "rxjs";
 import { tap, takeWhile, takeUntil, switchMap, map } from "rxjs/operators";
+import { LOADING_STENCIL_ROUTES_URLS } from "./loading-stencil/loading-stencil.constants";
 
 enum TimerResult {
   COMPLETE,
@@ -18,8 +20,21 @@ export class AppComponent implements OnInit {
   simpleTimer$ = interval(100);
   _notifier: Subject<TimerResult> = new Subject();
   notifier$: Observable<TimerResult> = this._notifier.asObservable();
+
+  navRoutes: any = null;
+
+  constructor(
+    private router: Router
+  ) {}
   
-  ngOnInit() { }
+  ngOnInit() {
+    this.navRoutes = LOADING_STENCIL_ROUTES_URLS;
+  }
+
+  navToPage(page) {
+    console.log('AppComponent, navToPage, page = ' + page);
+    this.router.navigateByUrl(page);
+  }
 
   startTimer(): Observable<any> {
     const timer$ = this.simpleTimer$.pipe(
