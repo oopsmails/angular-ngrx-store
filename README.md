@@ -2,14 +2,17 @@
 
 See README.md of each project
 
-## angular9-ngrx-store-basic
+## angular9-ngrx-store-basic: basic store concepts
 
-## angular9-ngrx-store-blockchain
+## angular9-ngrx-store-blockchain: not really useful ...
 
-## AngularNgrxStoreCustomer
+## angular-ngrx-store-customer: store, CRUD, but just one page nav
 
-20201212: working on
+## angular-simple: ONLY trying basic Angular concepts
 
+## angular-ngrx-store-dev: will be a good project for everything ....
+
+20210116: working on
 
 ## Setup Environment:
 
