@@ -37,3 +37,21 @@ error TS2591: Cannot find name 'require'. Do you need to install type definition
 
 "@types/node": "^12.19.16",
 
+
+## Debugging tests
+If your tests aren't working as you expect them to, you can inspect and debug them in the browser.
+
+For the sample app that the testing guides describe, see the sample app.
+
+For the tests features in the testing guides, see tests.
+
+Debug specs in the browser in the same way that you debug an application.
+
+- Reveal the Karma browser window. See Set up testing if you need help with this step.
+- Click the DEBUG button; it opens a new browser tab and re-runs the tests.
+- Open the browser's “Developer Tools” (Ctrl-Shift-I on Windows; Command-Option-I in macOS).
+- Pick the "sources" section.
+- Open the 1st.spec.ts test file (Control/Command-P, then start typing the name of the file).
+- Set a breakpoint in the test.
+- Refresh the browser, and it stops at the breakpoint.
+
