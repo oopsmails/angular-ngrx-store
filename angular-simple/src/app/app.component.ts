@@ -16,6 +16,7 @@ enum TimerResult {
 })
 export class AppComponent implements OnInit {
   name = "Angular";
+  title = 'angular-simple';
   result;
   simpleTimer$ = interval(100);
   _notifier: Subject<TimerResult> = new Subject();
