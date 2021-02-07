@@ -33,9 +33,52 @@ npm install @ngx-translate/http-loader --save
 
 npm i @types/node --save
 
-error TS2591: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i @types/node` and then add `node` to the types field in your tsconfig.
-
 "@types/node": "^12.19.16",
+
+- error TS2591: Cannot find name 'require'. Do you need to install type definitions for node? Try `npm i @types/node` and then add `node` to the types field in your tsconfig.
+
+Solution:
+
+There are 3 ts config files,
+
+tsconfig.json, main
+tsconfig.app.json, for application, e.g, if using require in app.component.ts
+tsconfig.spec.json, for unit test, e.g, if using require in translation-test2.component.spec.ts
+
+1. put in tsconfig.json
+
+```
+  "compilerOptions": {
+..........,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+
+```
+
+2. put in tsconfig.app.json AND tsconfig.spec.json
+
+```
+
+
+"compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": ["node"] <--------------------------- for tsconfig.app.json
+  },
+
+
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": [
+      "node", <--------------------------- for tsconfig.spec.json
+      "jasmine"
+    ]
+
+```
+
+
+
+
+
 
 
 ## Debugging tests

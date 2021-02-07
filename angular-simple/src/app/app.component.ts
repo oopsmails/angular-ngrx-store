@@ -1,3 +1,4 @@
+import { stringify } from "@angular/compiler/src/util";
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { interval, Observable, Subject, combineLatest } from "rxjs";
@@ -9,6 +10,9 @@ enum TimerResult {
   ABORTED,
   SKIPPED
 }
+
+const TRANSLATIONS_FR = require('../assets/i18n/fr.json');
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
@@ -29,6 +33,7 @@ export class AppComponent implements OnInit {
   ) {}
   
   ngOnInit() {
+    console.log('########### in AppComponent, TRANSLATIONS_FR = \n' + JSON.stringify(TRANSLATIONS_FR));
     this.navRoutes = LOADING_STENCIL_ROUTES_URLS;
   }
 
