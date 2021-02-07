@@ -75,12 +75,6 @@ tsconfig.spec.json, for unit test, e.g, if using require in translation-test2.co
 
 ```
 
-
-
-
-
-
-
 ## Debugging tests
 If your tests aren't working as you expect them to, you can inspect and debug them in the browser.
 
@@ -97,4 +91,16 @@ Debug specs in the browser in the same way that you debug an application.
 - Open the 1st.spec.ts test file (Control/Command-P, then start typing the name of the file).
 - Set a breakpoint in the test.
 - Refresh the browser, and it stops at the breakpoint.
+
+
+## No2. How to test a single spec file?
+You are adding new test cases to your user.component.spec.ts file. You want to run them to see if they are working. Damn it. You already have hundreds of testing cases ahead. Hence, you are sitting down and counting your fingers, hoping your newly added cases could be hitted sooner. How to run a single spec file, namely, user.component.spec.ts? Go to **test.ts** file, commenting the following line:
+
+// Then we find all the tests.
+const context = require.context('./', true, /\/app\/.*\.ts$/);
+Instead, specify your spec file in the context:
+
+const context = require.context('./', true, /\/app\/user\/user\.component\.spec\.ts$/);
+
+
 
