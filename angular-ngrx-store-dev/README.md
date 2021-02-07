@@ -68,3 +68,10 @@ http://localhost:4200/dashboard/lll
 
 
 
+## Adding Ngrx Store
+
+### npm i
+
+npm install @ngrx/store @ngrx/effects @ngrx/router-store @ngrx/entity  @ngrx/store-devtools
+
+
